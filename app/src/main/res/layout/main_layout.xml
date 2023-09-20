@@ -2,30 +2,49 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/material_dynamic_tertiary80"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="8dp">
 
     <TextView
         android:id="@+id/counter"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:textColor="#8863C8"
+        android:text="Counter: 0"
+        android:background="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/buttonAdd"
+        app:layout_constraintEnd_toStartOf="@id/addButton"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_chainStyle="spread"/>
 
     <Button
-        android:id="@+id/buttonAdd"
-        android:text="Add"
+        android:id="@+id/addButton"
+        android:text="plus"
         android:textSize="14sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#8863C8"
         app:layout_constraintStart_toEndOf="@id/counter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/subButton"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintVertical_chainStyle="packed"/>
+    <Button
+        android:id="@+id/subButton"
+        android:text="minus"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#8863C8"
+        app:layout_constraintStart_toEndOf="@id/counter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addButton"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_chainStyle="spread"/>
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
