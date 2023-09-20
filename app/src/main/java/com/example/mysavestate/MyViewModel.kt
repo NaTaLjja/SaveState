@@ -14,9 +14,11 @@ class MyViewModel:ViewModel() {
     fun addCounter(){
         model.addCounter()
         itemLiveData.value = model.getCounter()
+        MyApplication.getApp().saveData(model.getCounter())
     }
     fun subCounter(){
         model.subCounter()
         itemLiveData.value = model.getCounter()
+        MyApplication.getApp().saveData(model.getCounter())
     }
 }
